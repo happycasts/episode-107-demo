@@ -1,0 +1,13 @@
+<div class="dog-list clearfix">
+  <% @dogs.each do |d| %>
+    <%= link_to "dog/#{d.id}", class: "dog-card" do %>
+      <div class="card-img">
+        <div class="click-comment">
+          Click to Comment
+        </div>
+        <%= image_tag d.image %>
+      </div>
+      <div class="title"><%= d.title %></div>
+    <% end %>
+  <% end %>
+</div>

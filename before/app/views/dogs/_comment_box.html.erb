@@ -1,0 +1,12 @@
+<div class="comment-box">
+  <%= form_tag "/dogs/#{dog.id}/comments", method: :post do %>
+    <div class="commenter-info clearfix">
+      <%= text_field_tag :commenter, nil, placeholder: 'Your Name...' %>
+      <%= text_field_tag :email, nil, placeholder: "Email" %>
+    </div>
+    <div class="comment-content">
+      <%= text_area_tag :content, nil, placeholder: "Be Cool" %>
+    </div>
+    <%= submit_tag '提交评论', class: 'btn' %>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<div class="dog-img">
+  <h2 class="dog-title"><%= @dog.title %></h2>
+  <%= image_tag @dog.image %>
+</div>
+<div class="comments">
+  <% @comments.each do |comment| %>
+    <%= render partial: "comment", locals: {comment: comment} %>
+  <% end %>
+</div>
+<%= render partial: "comment_box", locals: {dog: @dog} %>
+</div>

@@ -1,0 +1,17 @@
+<div class="comment clearfix">
+  <div class="avatar">
+    <%= image_tag comment.avatar %>
+  </div>
+  <div class="body">
+    <h3 class="commenter">
+      <%= comment.commenter %>
+    </h3>
+    <div class="comment-time">
+      <%= comment.created_at.strftime("%B %d, %Y") %>
+    </div>
+    <div class="text">
+      <%= comment.content %>
+    </div>
+  </div>
+</div>
+
